@@ -1,0 +1,1 @@
+- **feat(termux):** one-shot Android installer — `contrib/termux/install-omniroute-termux.sh` installs the Termux toolchain, validates the Node.js line, installs `omniroute`, and writes a `start|stop|status|url|logs` control script plus a Termux:Boot autostart hook (`--dry-run`, `--method npx`, `--no-service`, `--port`), with a README and contract tests

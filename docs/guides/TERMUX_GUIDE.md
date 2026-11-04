@@ -8,6 +8,16 @@ lastUpdated: 2026-07-25
 
 OmniRoute can run as a headless server on Android through Termux. The Electron desktop app is not supported in Termux, but the web dashboard and OpenAI-compatible API work from the local browser or from other devices on the same network.
 
+## Automated install (recommended)
+
+`contrib/termux/install-omniroute-termux.sh` performs every manual step below — toolchain, Node.js check, `npm install -g omniroute`, plus a `start|stop|status|url|logs` control script and an optional Termux:Boot hook:
+
+```bash
+bash install-omniroute-termux.sh --start
+```
+
+See [`contrib/termux/README.md`](../../contrib/termux/README.md) for the flags (`--port`, `--method npx`, `--no-service`, `--dry-run`). The manual steps below remain the reference for what the script does.
+
 ## Prerequisites
 
 Install Termux from F-Droid or GitHub releases, then update packages and install the build tools required by native dependencies such as `better-sqlite3`.
