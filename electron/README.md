@@ -253,6 +253,14 @@ Place your icons in `assets/`:
 
 ## Troubleshooting
 
+### Windows installer seems stuck (e.g. at 75%)
+
+The NSIS installer extracts a ~592 MiB / ~20k-file payload in three passes, and the progress
+bar is redrawn mid-run — so a bar that stops moving is usually the slow extraction phase,
+not a hang. Check Task Manager for I/O activity, pause antivirus, install to a plain local
+path, or use the portable `.exe` instead. Full decision tree:
+[INSTALLER-STALL.md](./INSTALLER-STALL.md).
+
 ### App Won't Start
 
 1. Check if port 20128 is available: `lsof -i :20128`
